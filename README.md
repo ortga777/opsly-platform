@@ -2,33 +2,38 @@
 
 **Simple operations. Smarter businesses.**
 
-Opsly is an AI-powered operations workspace designed to help growing businesses simplify daily operations, understand their business activity, and turn insights into action.
+Opsly is an AI-native operating workspace for growing businesses. It brings tasks, sales, products, teams and business intelligence into one focused experience.
 
-## Product vision
+## Architecture
 
-Opsly brings tasks, sales, products, team activity, workflows, and AI-powered operational intelligence into one focused workspace.
+- Next.js + React + TypeScript
+- Tailwind CSS
+- PostgreSQL + Prisma
+- AWS Cognito for identity
+- Amazon Bedrock for business intelligence
+- AWS production infrastructure
 
-## Competition profile
+## Product areas
 
-- **Category:** Commercial Potential
-- **Lane:** Startups
-- **Status:** Early-stage original build
-
-## Planned capabilities
-
-- Operations dashboard
-- Task and workflow management
-- Sales tracking
-- Product and inventory management
-- Team workspace
+- Overview
+- Tasks
+- Sales
+- Products
+- Team
 - Opsly AI
-- Opsly Pulse
-- Actionable business insights
+- Settings
 
 ## Development
 
-This repository documents the product and engineering journey from foundation to production deployment.
+Copy `.env.example` to `.env.local`, configure the database, then run:
 
-## License
+```bash
+npm install
+npm run db:generate
+npm run db:push
+npm run dev
+```
 
-All rights reserved. This project is an original work of the Opsly project owner.
+## Vision
+
+Opsly is designed as a multi-tenant SaaS product: each business gets an isolated workspace, its own operational data and an AI layer that turns business context into useful actions.
